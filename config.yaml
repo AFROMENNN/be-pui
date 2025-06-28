@@ -1,0 +1,14 @@
+SECRET_KEY: "supersecretkey123"
+
+database:
+  host: "localhost"
+  port: "5432"
+  user: "postgres"
+  password: "secret"
+  name: "elerning"
+  ssl_mode: "disable"
+
+server:
+  port: "3030"
+  mode: "debug"
+  base_url: "http://localhost:3030"
