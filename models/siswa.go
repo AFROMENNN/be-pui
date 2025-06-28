@@ -9,7 +9,7 @@ type Siswa struct {
 	Password   string    `json:"password"`
 	ProfileUrl string    `json:"profile_url"`
 	NoHp       string    `json:"no_hp"`
-	KelasID    *int      `json:"kelas_id"` // Nullable foreign key
+	KelasID    *int      `json:"kelas_id"`
 	Created    time.Time `json:"created"`
 	Updated    time.Time `json:"updated"`
 }
