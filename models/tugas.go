@@ -3,12 +3,12 @@ package models
 import "time"
 
 type Tugas struct {
-	ID              int       `json:"id"`
-	Judul           string    `json:"judul"`
-	Deskripsi       string    `json:"deskripsi"`
-	MataPelajaranID int       `json:"mata_pelajaran_id"`
-	KelasID         int       `json:"kelas_id"`
-	Deadline        time.Time `json:"deadline"`
-	Created         time.Time `json:"created"`
-	Updated         time.Time `json:"updated"`
+	ID              int       `db:"id"`
+	Judul           string    `db:"judul"`
+	Deskripsi       string    `db:"deskripsi"`
+	MataPelajaranID int       `db:"mata_pelajaran_id"`
+	KelasID         int       `db:"kelas_id"`
+	Deadline        time.Time `db:"deadline"`
+	Created         time.Time `db:"created"`
+	Updated         time.Time `db:"updated"`
 }

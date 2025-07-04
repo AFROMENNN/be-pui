@@ -3,6 +3,7 @@ package main
 import (
 	"be-pui/config"
 	"be-pui/db"
+	"be-pui/router"
 	"context"
 	"log"
 	"net/http"
@@ -30,8 +31,11 @@ func main() {
 		}
 	}()
 
+	appRouter := router.SetupRouter(dbConn, cfg)
+
 	srv := &http.Server{
-		Addr: ":" + cfg.Server.Port,
+		Addr:    ":" + cfg.Server.Port,
+		Handler: appRouter,
 	}
 
 	go func() {
